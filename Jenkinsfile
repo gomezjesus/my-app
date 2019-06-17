@@ -4,9 +4,9 @@ pipeline {
         maven 'maven-3.6.1'
     }
     stages {
-         stage('---cleanWorkspace---') {
+         stage('---clean---') {
             steps {
-                cleanWs()
+                sh "mvn clean"
             }
         }
         stage('---test---') { 
